@@ -8,4 +8,9 @@ public class TariffContract extends Tariff{
         }
         this.durationMonths = durationMonths;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format(" | Duration: %d", durationMonths);
+    }
 }

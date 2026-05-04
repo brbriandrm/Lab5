@@ -15,4 +15,9 @@ public class TariffUnlimited extends Tariff{
         }
         this.expirationDate = expirationDate;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format(" | Expiration Date", expirationDate);
+    }
 }

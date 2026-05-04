@@ -29,5 +29,9 @@ public abstract class Tariff {
         return clientCount;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Tariff: %s | Fees: %.2f | Clients: %d", name, subsCost, clientCount);
+    }
 
 }
