@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"Main","l":"Main()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{"p":"<Unnamed>","c":"Tariff","l":"getClientCount()"},{"p":"<Unnamed>","c":"Tariff","l":"getName()"},{"p":"<Unnamed>","c":"Tariff","l":"getSubsCost()"},{"p":"<Unnamed>","c":"Main","l":"Main()","u":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"Tariff","l":"Tariff(String, double, int)","u":"%3Cinit%3E(java.lang.String,double,int)"}];updateSearchResults();
