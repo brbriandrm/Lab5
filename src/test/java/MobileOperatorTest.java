@@ -30,5 +30,20 @@ class MobileOperatorTest {
         assertEquals(expectedClients, operator.calculateTotalClients());
     }
 
+    @Test
+    void testSortTariffByPrice() {
+        operator.addTariff(prepaid);
+        operator.addTariff(contract);
+        operator.addTariff(unlimited);
+
+        operator.sortTariffsByPrice();
+
+        List<Tariff> sortedList = operator.findTariffInRange(0, 5000);
+
+        assertEquals("Extra LTE", sortedList.get(0).getName());
+        assertEquals("Plus Ultra", sortedList.get(1).getName());
+        assertEquals("Business Blue", sortedList.get(2).getName());
+    }
+
 
 }
