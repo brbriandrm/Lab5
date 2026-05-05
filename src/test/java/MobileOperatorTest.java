@@ -45,5 +45,31 @@ class MobileOperatorTest {
         assertEquals("Business Blue", sortedList.get(2).getName());
     }
 
+    @Test
+    void testFindTariffInTheRange() {
+        operator.addTariff(prepaid);
+        operator.addTariff(contract);
+        operator.addTariff(unlimited);
 
+        List<Tariff> result = operator.findTariffInRange(195.1, 392.5);
+        assertEquals(2, result.size());
+
+        boolean foundBusinessBlue = false;
+        for(Tariff t : result) {
+            if(t.getName().equals("Business Blue")){
+                foundBusinessBlue = true;
+                break;
+            }
+        }
+        assertTrue(foundBusinessBlue);
+
+        boolean foundPlusUltra = false;
+        for(Tariff t : result) {
+            if(t.getName().equals("Plus Ultra")){
+                foundPlusUltra = true;
+                break;
+            }
+        }
+        assertTrue(foundPlusUltra);
+    }
 }
