@@ -10,7 +10,7 @@ public abstract class Tariff {
 
     public Tariff(String name, double subsCost, int clientCount) {
         if(subsCost < 0 || clientCount < 0){
-            throw new IllegalArgumentException("Subscription fees and client count cannot be less than 0");
+            throw new IllegalArgumentException("Subscription cost and client count cannot be less than 0");
         }
         this.name = name;
         this.subsCost = subsCost;
@@ -31,7 +31,7 @@ public abstract class Tariff {
 
     @Override
     public String toString() {
-        return String.format("Tariff: %s | Fees: %.2f | Clients: %d", name, subsCost, clientCount);
+        return String.format("Tariff: %s | Cost: %.2f | Clients: %d", name, subsCost, clientCount);
     }
 
 }
