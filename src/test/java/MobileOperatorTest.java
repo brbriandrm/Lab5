@@ -72,4 +72,34 @@ class MobileOperatorTest {
         }
         assertTrue(foundPlusUltra);
     }
+
+    @Test
+    void testAddNullTariffThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            operator.addTariff(null);
+        });
+    }
+
+    @Test
+    void testInvalidPriceRangeThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            operator.findTariffInRange(500.0, 100.0);
+        });
+    }
+
+    @Test
+    void testNegativeSubscriptionFeeThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new TariffPrepaid("InvalidPlan", -50.0, 100, 10.0);
+        });
+    }
+
+    @Test
+    void testTariffUnlimitedPastDateThrowsException() {
+        LocalDate pastDate = LocalDate.now().minusDays(10);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            new TariffUnlimited("ExpiredPlan", 500.0, 10, pastDate);
+        });
+    }
 }
