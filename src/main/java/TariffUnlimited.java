@@ -18,6 +18,6 @@ public class TariffUnlimited extends Tariff{
 
     @Override
     public String toString() {
-        return super.toString() + String.format(" | Expiration Date", expirationDate);
+        return super.toString() + String.format(" | Expiration Date: %s", expirationDate);
     }
 }

@@ -3,7 +3,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class MobileOperator {
-    private List<Tariff> tariffs;
+    private List<Tariff>    tariffs;
 
 
     public MobileOperator(){
@@ -35,14 +35,14 @@ public class MobileOperator {
 
         List<Tariff> matchedTariffs = new ArrayList<>();
         for(Tariff tariff : tariffs) {
-            if(tariff.getSubsCost() <= minCost && tariff.getSubsCost() >= maxCost) {
+            if(tariff.getSubsCost() >= minCost && tariff.getSubsCost() <= maxCost) {
                 matchedTariffs.add(tariff);
             }
         }
         return matchedTariffs;
     }
 
-    void printTariffs(){
+   public void printTariffs(){
         for(Tariff tariff : tariffs) {
             System.out.println(tariff.toString());
         }
