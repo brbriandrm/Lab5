@@ -41,4 +41,10 @@ public class MobileOperator {
         }
         return matchedTariffs;
     }
+
+    void printTariffs(){
+        for(Tariff tariff : tariffs) {
+            System.out.println(tariff.toString());
+        }
+    }
 }
