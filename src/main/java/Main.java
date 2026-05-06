@@ -3,6 +3,12 @@ import java.util.List;
 
 public class Main {
 
+    /**
+     * Executes the main method: create instance of MobileOperator
+     * The main entry point for the application.
+     *  Demonstrates the functionalities of the MobileOperator class.
+     *  @param args Command-line arguments
+     */
     public static void main(String[] args) {
     MobileOperator operator = new MobileOperator();
 
