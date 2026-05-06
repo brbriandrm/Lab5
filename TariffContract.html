@@ -123,7 +123,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns attributes of a contract tariff</div>
+</div>
 </div>
 </div>
 </div>
@@ -151,6 +153,14 @@ loadScripts(document, 'script');</script>
  double&nbsp;subsCost,
  int&nbsp;clientCount,
  int&nbsp;durationMonths)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - the name of the tariff plan</dd>
+<dd><code>subsCost</code> - the monthly subscription cost</dd>
+<dd><code>clientCount</code> - total number of clients using this tariff</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if durationMonths is less than 1</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -165,9 +175,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns attributes of a contract tariff</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Tariff.html#toString()">toString</a></code>&nbsp;in class&nbsp;<code><a href="Tariff.html" title="class in Unnamed Package">Tariff</a></code></dd>
+<dt>Returns:</dt>
+<dd>a String specifying attributes of the contract tariff</dd>
 </dl>
 </section>
 </li>

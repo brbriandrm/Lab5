@@ -89,6 +89,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MobileOperator</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Manages a list of mobile tariffs
+ Provides functionality and methods for adding, sorting, finding in range
+ and calculating total clients count</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -101,7 +104,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">MobileOperator</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">creates an empty MobileOperator constructor with no tariffs</div>
+</div>
 </div>
 </section>
 </li>
@@ -118,20 +123,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTariff(Tariff)" class="member-name-link">addTariff</a><wbr>(<a href="Tariff.html" title="class in Unnamed Package">Tariff</a>&nbsp;tariff)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a new tariff to the list</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateTotalClients()" class="member-name-link">calculateTotalClients</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Calculates total clients count of all added tariffs</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Tariff.html" title="class in Unnamed Package">Tariff</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTariffInRange(double,double)" class="member-name-link">findTariffInRange</a><wbr>(double&nbsp;minCost,
  double&nbsp;maxCost)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Searches for all tariffs that fall into provided cost range</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printTariffs()" class="member-name-link">printTariffs</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Print tariff list</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sortTariffsByPrice()" class="member-name-link">sortTariffsByPrice</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sorts list of added tariffs by their price</div>
+</div>
 </div>
 </div>
 </div>
@@ -153,6 +168,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MobileOperator</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MobileOperator</span>()</div>
+<div class="block">creates an empty MobileOperator constructor with no tariffs</div>
 </section>
 </li>
 </ul>
@@ -167,18 +183,31 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addTariff(Tariff)">
 <h3>addTariff</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addTariff</span><wbr><span class="parameters">(<a href="Tariff.html" title="class in Unnamed Package">Tariff</a>&nbsp;tariff)</span></div>
+<div class="block">Adds a new tariff to the list</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>tariff</code> - the tariff instance to be added</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if given tariff is null</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="calculateTotalClients()">
 <h3>calculateTotalClients</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">calculateTotalClients</span>()</div>
+<div class="block">Calculates total clients count of all added tariffs</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>total sum of clients</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="sortTariffsByPrice()">
 <h3>sortTariffsByPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sortTariffsByPrice</span>()</div>
+<div class="block">Sorts list of added tariffs by their price</div>
 </section>
 </li>
 <li>
@@ -186,12 +215,23 @@ loadScripts(document, 'script');</script>
 <h3>findTariffInRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Tariff.html" title="class in Unnamed Package">Tariff</a>&gt;</span>&nbsp;<span class="element-name">findTariffInRange</span><wbr><span class="parameters">(double&nbsp;minCost,
  double&nbsp;maxCost)</span></div>
+<div class="block">Searches for all tariffs that fall into provided cost range</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>minCost</code> - the minimum price bound</dd>
+<dd><code>maxCost</code> - the maximum price bound</dd>
+<dt>Returns:</dt>
+<dd>List of tariff instances that match the price range</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if minCost and maxCost are negative or if minCost is larger than maxCost</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="printTariffs()">
 <h3>printTariffs</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printTariffs</span>()</div>
+<div class="block">Print tariff list</div>
 </section>
 </li>
 </ul>
