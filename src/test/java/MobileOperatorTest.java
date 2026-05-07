@@ -38,7 +38,7 @@ class MobileOperatorTest {
 
         operator.sortTariffsByPrice();
 
-        List<Tariff> sortedList = operator.findTariffInRange(0, 5000);
+        List<Tariff> sortedList = operator.getTariffs();
 
         assertEquals("Extra LTE", sortedList.get(0).getName());
         assertEquals("Plus Ultra", sortedList.get(1).getName());

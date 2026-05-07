@@ -7,7 +7,7 @@ import java.util.List;
  * and calculating total clients count
  */
 public class MobileOperator {
-    private List<Tariff>    tariffs;
+    private List<Tariff> tariffs;
 
     /**
      * creates an empty MobileOperator constructor with no tariffs
@@ -66,6 +66,10 @@ public class MobileOperator {
             }
         }
         return matchedTariffs;
+    }
+
+    public List<Tariff> getTariffs() {
+        return tariffs;
     }
 
     /**
